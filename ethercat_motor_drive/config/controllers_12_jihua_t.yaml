@@ -1,0 +1,27 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 500  # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    effort_controller:
+      type: effort_controllers/JointGroupEffortController
+
+effort_controller:
+  ros__parameters:
+    command_interfaces:
+      - effort
+    joints:
+      - joint_1     
+      - joint_2        
+      - joint_3     
+      - joint_4              
+      - joint_5     
+      - joint_6      
+      - joint_7     
+      - joint_8        
+      - joint_9     
+      - joint_10              
+      - joint_11     
+      - joint_12     

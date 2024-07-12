@@ -54,6 +54,8 @@ def generate_launch_description():
         [
             FindPackageShare("ethercat_motor_drive"),
             "config",
+            # "controllers_12_jihua_t_6.yaml",
+            # "controllers_12_jihua_t.yaml",
             "controllers.yaml",
         ]
     )
@@ -89,11 +91,11 @@ def generate_launch_description():
     #     arguments=["velocity_controller", "-c", "/controller_manager"],
     # )
 
-    # effort_controller_spawner = Node(
-    #     package="controller_manager",
-    #     executable="spawner",
-    #     arguments=["effort_controller", "-c", "/controller_manager"],
-    # )
+    effort_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["effort_controller", "-c", "/controller_manager"],
+    )
 
     nodes = [
         control_node,
